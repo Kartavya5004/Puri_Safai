@@ -46,6 +46,9 @@ struct WipeCertificate {
 
     /// Verify using the embedded public key.
     bool VerifySelf() const;
+  
+    // newly added to resolve in .cpp file
+    bool VerifySignature_pem(const std::string& pem) const;
 
     void     SaveJson(const std::string& path) const;
     static WipeCertificate LoadJson(const std::string& path);
